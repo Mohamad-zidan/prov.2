@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resturant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+  <header class="hero">
+  <h1>Min resturant</h1>
+</header>
+    <div class="topnav">
+  <a class="active" href="index.html">Hem</a>
+  <a href="meny.html">Meny</a>
+  <a href="oss.html">Kontakt</a>
+  <a href="öppettider.html">Öppettider</a>
+   <input type="text" placeholder="Search..">
+</div>
+
+
+<div class="image-container">
+  <img src="bilder/fresh.jpeg" alt="Bild" class="image-fluid">
+  <div class="image-text">
+    <h1>Taste Our Fresh Food</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+<br>
+<div class="box">
+<div class="row">
+  <div class="col-md-4 d-flex">
+    <div class="card h-100" style="width: 18rem;">
+      <img src="bilder/scamp.jpg" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text.</p>
+        <a href="https://www.arla.se/artiklar/rakor-frossa-i-var-stora-guide-med-tips-och-recept/"
+           class="btn btn-primary mt-auto">
+          Buy
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 d-flex">
+    <div class="card h-100" style="width: 18rem;">
+      <img src="bilder/salmon.jpg" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text.</p>
+        <a href="https://www.recipetineats.com/honey-garlic-salmon-5-ingredients-15-minutes/"
+           class="btn btn-primary mt-auto">
+          Buy
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="col-md-4 d-flex">
+    <div class="card h-100" style="width: 18rem;">
+      <img src="bilder/seafood.jpeg" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text.</p>
+        <a href="https://www.recipetineats.com/tetsuyas-oysters-with-japanese-dressing/"
+           class="btn btn-primary mt-auto">
+          Buy
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="slutet">
+
+<h3>Vi bfinner oss i tredenborg</h3>
+
+</div>
+
+
+
+<!--denna script är för att koden för bilden ska funka-->
+
+<script>
+ let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}</script>
+</body>
+</html>

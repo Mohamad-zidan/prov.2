@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resturant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+  <header class="hero">
+  <h1>Min resturant</h1>
+</header>
+    <div class="topnav">
+  <a class="active" href="index.html">Hem</a>
+  <a href="meny.html">Meny</a>
+  <a href="oss.html">Kontakt</a>
+  <a href="öppettider.html">Öppettider</a>
+   <input type="text" placeholder="Search..">
+</div>
+<br>
+
+
+<div class="image-container">
+  <img src="bilder/staff.webp" alt="Bild" class="pic-fluid">
+  <div class="image-text">
+    <h1>Meet Our Nice Staff</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">personal</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">roll</th>
+    </tr>
+  </thead>
+  <br>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>chef</td>
+    </tr>
+    <br>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>payments</td>
+    </tr>
+    <br>
+    <tr>
+      <th scope="row">3</th>
+      <td>John</td>
+      <td>Doe</td>
+      <td>servics</td>
+    </tr>
+  </tbody>
+
+
+</table>
+
+
+
+
+
+<div class="slutet">
+
+<h3>Vi bfinner oss i tredenborg</h3>
+
+</div>
+
+
+
+
+
+<script>
+ let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}</script>
+</body>
+</html>
